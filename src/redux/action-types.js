@@ -1,0 +1,1 @@
+export const FETCH_FOREX = 'FETCH_FOREX'
