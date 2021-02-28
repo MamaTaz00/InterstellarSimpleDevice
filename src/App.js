@@ -2,22 +2,20 @@ import './App.css';
 import { React, Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchForex } from './redux/actions/data-actions';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import {Switch,Route} from 'react-router-dom';
+import Footer from './components/Footer';
 class App extends Component {
-  
-  componentDidMount() {
-    this.props.fetchForex()
-    console.log(this.props.forex)
-  }
+ 
   render() {
-    
     return (
       <>
-        <h1>{this.props.forex[0].value}</h1>
-        {this.props.forex.map((w) => {
-          return (
-            <h1>{w.value}</h1>
-          )
-        })}
+        <Navbar/>
+        <Switch>
+          <Route exact path='/' component={Home}></Route>    
+        </Switch>
+        <Footer />
       </>
     );
   }
