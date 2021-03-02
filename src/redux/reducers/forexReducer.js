@@ -1,4 +1,4 @@
-import { FETCH_FOREX } from '../action-types';
+import { FETCH_USD_FOREX } from '../action-types';
 
 const initialState = {
   data: [],
@@ -6,7 +6,7 @@ const initialState = {
 
 export const forexReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_FOREX:
+    case FETCH_USD_FOREX:
       return {
         ...state,
         data: action.payload

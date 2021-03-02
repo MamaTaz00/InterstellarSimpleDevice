@@ -1,1 +1,1 @@
-export const FETCH_FOREX = 'FETCH_FOREX'
+export const FETCH_USD_FOREX = 'FETCH_USD_FOREX'
